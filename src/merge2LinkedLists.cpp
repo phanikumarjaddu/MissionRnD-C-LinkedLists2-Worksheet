@@ -12,12 +12,29 @@ NOTES:
 */
 
 #include <stdio.h>
+#include<malloc.h>
 
 struct node {
 	int num;
 	struct node *next;
 };
 
-struct node * merge2LinkedLists(struct node *head1, struct node *head2) {
-	return NULL;
+struct node * merge2LinkedLists(struct node *head1, struct node *head2) 
+{
+	int i;
+	struct node *temp1;
+	if (head1 == NULL && head2 == NULL)
+		return NULL;
+	if (head1 == NULL)
+		return head2;
+	if (head2 == NULL)
+		return head1;
+	temp1 = head1;
+	for (i = 0; temp1->next != NULL; i++)
+	{
+		temp1 = temp1 ->next;
+	}
+	temp1 = head2;
+    
+	return head1;
 }
